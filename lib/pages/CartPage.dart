@@ -1,5 +1,6 @@
 import 'package:ShoppingApp/controller/homePageController.dart';
 import 'package:ShoppingApp/models/ItemModel.dart';
+import 'package:ShoppingApp/screens/delivery/delivertScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -147,7 +148,9 @@ class CartPage extends StatelessWidget {
                 height: 50,
                 color: Colors.white,
                 child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, DeliveryScreen.routeName);
+                    },
                     child: Container(
                       alignment: Alignment.center,
                       height: 40,

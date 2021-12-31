@@ -29,7 +29,7 @@ class HomePageController extends GetxController {
     return cartItems.indexWhere((element) => element.shopId == id) > -1;
   }
 
-  getCardList() async{
+  getCardList() async {
     try {
       List list = await itemServices.getCartList();
       cartItems.clear();
@@ -37,13 +37,12 @@ class HomePageController extends GetxController {
         cartItems.add(ShopItemModel.fromJson(element));
       });
       update();
-
     } catch (e) {
       print(e);
     }
   }
 
-  loadItems()async{
+  loadItems() async {
     try {
       isLoading = true;
       update();
@@ -85,6 +84,12 @@ class HomePageController extends GetxController {
     itemServices.removeFromCart(shopId);
     int index = cartItems.indexWhere((element) => element.shopId == shopId);
     cartItems.removeAt(index);
+    update();
+  }
+
+  deletefromcart() async {
+    itemServices.delete();
+
     update();
   }
 }

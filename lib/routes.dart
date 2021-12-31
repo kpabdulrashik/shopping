@@ -1,3 +1,5 @@
+import 'package:ShoppingApp/screens/delivery/componnents/deliverSuccess.dart';
+import 'package:ShoppingApp/screens/delivery/delivertScreen.dart';
 import 'package:ShoppingApp/screens/productlist/productHome.dart';
 import 'package:flutter/widgets.dart';
 import 'package:ShoppingApp/screens/cart/cart_screen.dart';
@@ -28,4 +30,6 @@ final Map<String, WidgetBuilder> routes = {
   CartScreen.routeName: (context) => CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
   ProductHome.routeName: (context) => ProductHome(),
+  DeliveryScreen.routeName: (context) => DeliveryScreen(),
+  DeliverSuccessScreen.routeName: (context) => DeliverSuccessScreen(),
 };

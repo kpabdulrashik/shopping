@@ -69,4 +69,8 @@ class ItemServices {
   removeFromCart(int shopId) async {
     return await sqlService.removeFromCart(shopId);
   }
+
+  delete() async {
+    return await sqlService.deleteFromCart();
+  }
 }

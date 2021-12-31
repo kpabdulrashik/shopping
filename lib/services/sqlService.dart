@@ -1,4 +1,3 @@
-
 import 'package:ShoppingApp/models/ItemModel.dart';
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
@@ -101,5 +100,12 @@ class SQLService {
   Future removeFromCart(int shopId) async {
     var qry = "DELETE FROM cart_list where shop_id = ${shopId}";
     return await this.db?.rawDelete(qry);
+  }
+
+  Future deleteFromCart() async {
+    var qry = "DELETE FROM cart_list where shop_id = ${1}";
+
+    // var qry = "DELETE FROM cart_list";
+    return await this.db?.delete(qry);
   }
 }
